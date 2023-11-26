@@ -108,7 +108,7 @@ wd.delete()
 
 
 
-
+pip freeze > requirements.txt
 
 
 
