@@ -8,23 +8,32 @@
 
 {% endblock %}
 {% block b_body%}
-<div class="home_cards_div">
+
+<div id="home_greetings_container">
+  <div id="home_greetings_title_container">
+    <span id="home_greetings_title">Здоавствуйте !</span>
+    <p id="home_greetings_text">Мы рады, что вы посетили наш сайт.</p>
+  </div>
+</div>
+
+
+<div class="cards_div">
 
     {% for n in news %}
     {% if n.is_published %}
-    <div class="home_card_div">
-      <div class="home_card_div_img">
-        <img src="../../../media/{{n.photo}}" alt="" class="home_card_img" />
+    <div class="card_div">
+      <div class="card_div_img">
+        <img src="../../../media/{{n.photo}}" alt="" class="card_img" />
       </div>
-      <div class="home_card_div_body">
-        <div class="home_card_div_title">
-          <h2 class="home_card_title">{{n.title}}</h2>
+      <div class="card_div_body">
+        <div class="card_div_title">
+          <h3 class="card_title">{{n.title}}</h3>
         </div>
-        <div class="home_card_div_short_description">
-          <p class="home_card_short_description">{{n.short_description}}</p>
+        <div class="card_div_short_description">
+          <p class="card_short_description">{{n.short_description}}</p>
         </div>
-        <div class="home_card_div_link">
-          <a href="/news/{{n.id}}" class="home_card_a">
+        <div class="card_div_link">
+          <a href="/news/{{n.id}}" class="card_a">
             Подробнее
           </a>
         </div>

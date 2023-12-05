@@ -12,64 +12,80 @@
                 <img id="header_logo" src="{% static 'home/img/logo.svg' %}" alt="">
             </div>
             <div id="header_icon_div">
-                <img  class="header_icon_button" src="{% static 'home/img/menu.svg' %}" alt="">
+                <img id="header_icon_button_menu_t" class="header_icon_button header_icon_button_t" src="{% static 'home/img/menu_t.svg' %}" alt="">
+                <img id="header_icon_button_menu_td" class="header_icon_button header_icon_button_td" src="{% static 'home/img/menu_td.svg' %}" alt="">
             </div>
         </div>
         <ul id="header_nav_ui">
             <li class="header_nav_li" title="перейти на страницу &#8221;Главная&#8221;.">
                 <a href="/">
-                    <img  class="header_icon_button" src="{% static 'home/img/home.svg' %}" alt="">
+                    <img id="header_icon_button_home_t" class="header_icon_button header_icon_button_t" src="{% static 'home/img/home_t.svg' %}" alt="">
+                    <img id="header_icon_button_home_td" class="header_icon_button header_icon_button_td" src="{% static 'home/img/home_td.svg' %}" alt="">
                     <span class="desktop_mobile">Главная</span>
                 </a>
             </li>
             <li class="header_nav_li" title="перейти на страницу &#8221;О нас&#8221;.">
                 <a href="/about/">
-                    <img  class="header_icon_button" src="{% static 'home/img/about.svg' %}" alt="">
+                    <img id="header_icon_button_about_t" class="header_icon_button header_icon_button_t" src="{% static 'home/img/about_t.svg' %}" alt="">
+                    <img id="header_icon_button_about_td" class="header_icon_button header_icon_button_td" src="{% static 'home/img/about_td.svg' %}" alt="">
                     <span class="desktop_mobile">О нас</span>
                 </a>
             </li>
             <li class="header_nav_li" title="перейти на страницу &#8221;Магазин&#8221;.">
                 <a href="/market/">
-                    <img  class="header_icon_button" src="{% static 'home/img/market.svg' %}" alt="">
+                    <img id="header_icon_button_market_t" class="header_icon_button header_icon_button_t" src="{% static 'home/img/market_t.svg' %}" alt="">
+                    <img id="header_icon_button_market_td" class="header_icon_button header_icon_button_td" src="{% static 'home/img/market_td.svg' %}" alt="">
                     <span class="desktop_mobile">Магазин</span>
                 </a>
             </li>
             <li class="header_nav_li" title="перейти на страницу &#8221;Услуги&#8221;.">
                 <a href="/service/">
-                    <img  class="header_icon_button" src="{% static 'home/img/help.svg' %}" alt="">
+                    <img id="header_icon_button_help_t" class="header_icon_button header_icon_button_t" src="{% static 'home/img/help_t.svg' %}" alt="">
+                    <img id="header_icon_button_help_td" class="header_icon_button header_icon_button_td" src="{% static 'home/img/help_td.svg' %}" alt="">
                     <span class="desktop_mobile">Услуги</span>
                 </a>
             </li>
             <li class="header_nav_li" title="перейти на страницу &#8221;Наши работы&#8221;.">
                 <a href="/works/">
-                    <img  class="header_icon_button" src="{% static 'home/img/our_work.svg' %}" alt="">
+                    <img id="header_icon_button_our_work_t" class="header_icon_button header_icon_button_t" src="{% static 'home/img/our_work_t.svg' %}" alt="">
+                    <img id="header_icon_button_our_work_td" class="header_icon_button header_icon_button_td" src="{% static 'home/img/our_work_td.svg' %}" alt="">
                     <span class="desktop_mobile">Наши работы</span>
                 </a>
             </li>
             <li class="header_nav_li" id="header_nav_li_search" title="перейти на страницу &#8221;Поиск&#8221;.">
                 <!-- <a href="/search/"> -->
                 <div id="div_li_a">
-                    <img  class="header_icon_button" src="{% static 'home/img/search.svg' %}" alt="">
+                    <img id="header_icon_button_search_t" class="header_icon_button header_icon_button_t" src="{% static 'home/img/search_t.svg' %}" alt="">
+                    <img id="header_icon_button_search_td" class="header_icon_button header_icon_button_td" src="{% static 'home/img/search_td.svg' %}" alt="">
                     <span class="desktop_mobile">Поиск</span>
                 </div>
                     <!-- </a> -->
             </li>
             <li class="header_nav_li" title="перейти на страницу &#8221;Полезное&#8221;.">
                 <a href="/useful/">
-                    <img  class="header_icon_button" src="{% static 'home/img/useful.svg' %}" alt="">
+                    <img id="header_icon_button_useful_t" class="header_icon_button header_icon_button_t" src="{% static 'home/img/useful_t.svg' %}" alt="">
+                    <img id="header_icon_button_useful_td" class="header_icon_button header_icon_button_td" src="{% static 'home/img/useful_td.svg' %}" alt="">
                     <span class="desktop_mobile">Полезное</span>
                 </a>
             </li>
             <li class="header_nav_li" title="перейти на страницу &#8221;Контакты&#8221;.">
                 <a href="/contacts/">
-                    <img  class="header_icon_button" src="{% static 'home/img/phone.svg' %}" alt="">
+                    <img id="header_icon_button_phone_t" class="header_icon_button header_icon_button_t" src="{% static 'home/img/phone_t.svg' %}" alt="">
+                    <img id="header_icon_button_phone_td" class="header_icon_button header_icon_button_td" src="{% static 'home/img/phone_td.svg' %}" alt="">
                     <span class="desktop_mobile">Контакты</span>
                 </a>
             </li>
-            
-
-
+            <li class="header_nav_li" >
+                <div class="container">
+                    <label id="switch" class="switch" for="checkbox" >
+                      <input type="checkbox" id="checkbox"  onchange="toggleTheme()" />
+                      <div class="slider round"></div>
+                    </label>
+                  </div>
+   
+        </li>
         </ul>
+        
     </nav>
 
 
@@ -80,6 +96,7 @@
             <option value="news">новости</option>
             <option value="product">товары</option>
             <option value="service">услуги</option>
+            <option value="works">работы</option>
           </select>
         <button id="header_but_search"  type="button">search</button>
     </form>

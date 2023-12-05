@@ -79,3 +79,14 @@ class News(models.Model):
         media_path = os.path.abspath("../company101/media/")
         # print(media_path)
         return media_path
+    
+# class Style_pages(models.Model):
+#     # home_style = models.CharField(max_length=255, verbose_name='Заголовок')
+#     home_style = models.St
+#     class Meta:
+#         verbose_name = 'Новость'
+#         verbose_name_plural = 'Новости'
+#         ordering = ['time_create', 'title']
+
+#     def __str__(self):
+#         return self.title

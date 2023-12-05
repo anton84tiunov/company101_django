@@ -1,9 +1,38 @@
 {% extends "home/base.html" %}
+{% load static %}
 
 {% block b_head %}
 {{super}}
 <title>works</title>
+<link rel="stylesheet" href="{% static 'works/css/works.css' %}">
+
 {% endblock %}
 {% block b_body%}
-<h1>works</h1>
+<div class="cards_div">
+
+    {% for n in works %}
+    {% if n.is_published %}
+    <div class="card_div">
+      <div class="card_div_img">
+        <img src="../../../media/{{n.photo}}" alt="" class="card_img" />
+      </div>
+      <div class="card_div_body">
+        <div class="card_div_title">
+          <h3 class="card_title">{{n.title}}</h3>
+        </div>
+        <div class="card_div_short_description">
+          <p class="card_short_description">{{n.short_description}}</p>
+        </div>
+        <div class="card_div_link">
+          <a href="/works/work/{{n.id}}" class="card_a">
+            Подробнее
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %} 
+
+
+<script src="{% static 'works/js/works.js' %}"></script> 
 {% endblock %}

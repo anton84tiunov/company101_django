@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="theme-color" content="rgb(39, 147, 153)" />
     <link rel="stylesheet" href="{% static 'home/css/reset_style.css' %}">
     <link rel="stylesheet" href="{% static 'home/css/base.css' %}">
     {% block b_head %}
@@ -11,6 +12,7 @@
     {% endblock %}
 </head>
 <body>
+  <div id="back_body"></div>
     <div id="header">
       {% include 'home/header.html' %}
     </div>

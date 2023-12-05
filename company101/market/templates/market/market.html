@@ -7,23 +7,23 @@
 {% endblock %}
 {% block b_body%}
 
-<div class="market_cards_div">
+<div class="cards_div">
 
     {% for n in product %}
     {% if n.is_published %}
-    <div class="market_card_div">
-      <div class="market_card_div_img">
-        <img src="../../../media/{{n.photo}}" alt="" class="market_card_img" />
+    <div class="card_div">
+      <div class="card_div_img">
+        <img src="../../../media/{{n.photo}}" alt="" class="card_img" />
       </div>
-      <div class="market_card_div_body">
-        <div class="market_card_div_title">
-          <h2 class="market_card_h">{{n.model}}</h2>
+      <div class="card_div_body">
+        <div class="card_div_title">
+          <h3 class="card_title">{{n.model}}</h3>
         </div>
-        <div class="market_card_div_content">
-          <p class="market_card_p">{{n.short_description}}</p>
+        <div class="card_div_short_description">
+          <p class="card_short_description">{{n.short_description}}</p>
         </div>
-        <div class="market_card_div_link">
-          <a href="/market/product/{{n.id}}" class="market_card_a">
+        <div class="card_div_link">
+          <a href="/market/product/{{n.id}}" class="card_a">
             Подробнее
           </a>
         </div>

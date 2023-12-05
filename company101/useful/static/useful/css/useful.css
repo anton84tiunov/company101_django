@@ -1,154 +1,67 @@
-.cube {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    transform-style: preserve-3d;
-    transform: rotateX(-30deg);
-    animation: animateD 8s linear infinite;
-  }
-  
-  @keyframes animateD {
-    0% {
-      transform: rotateX(-15deg) rotateY(0deg);
-    }
-  
-    100% {
-      transform: rotateX(-15deg) rotateY(-360deg);
-    }
-  }
-  
-  .cube div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-  }
-  
-  .cube div span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: 2px solid #7dff99;
-    transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
-  }
-  
-  .topD {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: 300px;
-    background: transparent;
-    border: 2px solid #7dff99;
-    transform: rotateX(90deg) translateZ(150px);
-  }
-  
-  .topD::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: 300px;
-    background: transparent;
-    border: 2px solid #7dff99;
-    transform: translateZ(-400px);
-    filter: blur(30px);
-    box-shadow: 0 0 120px rgba(125, 255, 153, 0.2),
-      0 0 200px rgba(125, 255, 153, 0.4), 0 0 300px rgba(125, 255, 153, 0.6),
-      0 0 4000px rgba(125, 255, 153, 0.8), 0 0 500px rgba(125, 255, 153, 1);
-  }
-  
-  .cube2 {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    transform-style: preserve-3d;
-    animation: animateD2 5s ease-out infinite alternate;
-  }
-  
-  @keyframes animateD2 {
-    0% {
-      transform: rotateX(0deg) rotateY(0deg);
-    }
-  
-    100% {
-      transform: rotateX(180deg) rotateY(-360deg);
-    }
-  }
-  
-  .cube2 div {
-    position: absolute;
-    top: 35px;
-    left: 0;
-    width: 65%;
-    height: 65%;
-    transform-style: preserve-3d;
-  }
-  
-  .cube2 div span {
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    width: 65%;
-    height: 65%;
-    background: transparent;
-    border: 2px solid #7dff99;
-    transform: rotateY(calc(90deg * var(--i))) translateZ(62px);
-  }
-  
-  .cube3{
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    transform-style: preserve-3d;
-    transform: rotateX(-30deg);
-    animation: animateD3 1s ease-in-out infinite alternate;
-  }
-  
-  @keyframes animateD3 {
-    0% {
-      transform: rotateX(-90deg) rotateY(0deg);
-    }
-  
-    100% {
-      transform: rotateX(90deg) rotateY(45deg);
-    }
-  }
-  
-  .cube3 div {
-    position: absolute;
-    top: 70px;
-    left: 70px;
-    width: 15%;
-    height: 15%;
-    transform-style: preserve-3d;
-    
-  }
-  
-  .cube3 div span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #7dff99;
-    transform: rotateY(calc(90deg * var(--i))) translateZ(14px);
-    box-shadow: 0px 0px 7px #7dff99;
-  }
-  
-  .top3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #7dff99;
-    transform: rotateX(90deg) translateZ(14px);
-    box-shadow: 0px 0px 10px #7dff99;
-  }
-  
-  
+@media screen and (max-width: 480px) {
+ 
+}
+
+
+
+.calc_form_title {
+  margin: 15px 0;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+  color: #555;
+  font-weight: bold;
+  position: relative;
+  margin-bottom: 22px;
+}
+.calc_form_title:before {
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  width: 5%;
+  height: 2px;
+  background: #df3335;
+  content: '';
+}
+.calc_form_posttitle {
+  color: #313131;
+  line-height: 1.35;
+  text-transform: none;
+  letter-spacing: 0!important;
+  margin: 15px 0 5px 0;
+}
+.calc_form_inputGroup {
+  padding-left: 10px;
+}
+.calc_form_inputGroup label {
+cursor: pointer;
+display: block;
+}
+.calc_form_inputGroup select {
+cursor: pointer;
+}
+.calc_form_inputGroup [type=number] {
+max-width: 40px;
+}
+.calc_form_mg-input {
+  margin-top: 10px;
+}
+.calc_form_inputGroup input {
+  background: #f4f4f4;
+  border: 1px solid #e5e7e9;
+  padding: 1px 2px;
+}
+.calc_form_inputGroup [readonly] {
+border: none;
+background: none;
+font-weight: bold;
+color: #e03137;
+}
+.calc_form_btn {
+  margin-top: 15px;
+  background: #f4f4f4;
+  border: none;
+  padding: 10px 15px;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+  color: #222;
+}

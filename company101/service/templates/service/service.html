@@ -9,9 +9,9 @@
 {% endblock %}
 {% block b_body%}
 
-<h2 id="service_title">{{service.name}}</h2>
-  <img src="../../../media/{{service.photo}}" class="img_service"  id="service_photo" alt="">
-  <p id="service_short_description" >{{service.short_description}}</p>
+<h2 id="title">{{service.name}}</h2>
+  <img src="../../../media/{{service.photo}}" class="img_service"  id="photo" alt="">
+  <p id="short_description" >{{service.short_description}}</p>
 
   {{ service.extended_description|safe }}
 

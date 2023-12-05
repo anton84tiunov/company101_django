@@ -1,3 +1,8 @@
+@import "styles_thems.css";
+
+
+
+
 .aside_ul_li_a:active,
 .aside_ul_li_a:hover,
 .aside_ul_li_a,
@@ -7,7 +12,7 @@
 .aside_sub_ul,
 .aside_ul_li {
   text-decoration: none;
-  color: black;
+  color: var(--color-body);
 }
 .aside_sub_ul{
     display: none;

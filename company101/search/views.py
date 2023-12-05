@@ -5,6 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 from home.models import News
 from market.models import Product
 from service.models import Service
+from works.models import Works
 from django.db.models import Q
 from django.forms.models import model_to_dict
 
@@ -22,14 +23,17 @@ def get_search_str(request):
         news = []
         product = []
         service = []
+        works = []
         if select == "all" or select == "news":
             news = News.objects.filter(Q(title__icontains=str) | Q(short_description__icontains=str) | Q(cat__name__icontains=str)).values('id', 'title', 'short_description')
         if select == "all" or select == "product":    
             product = Product.objects.filter(Q(model__icontains=str) | Q(manufacturer__icontains=str) | Q(short_description__icontains=str) | Q(cat__name__icontains=str)).values('id', 'model', 'manufacturer', 'short_description', 'cat')
         if select == "all" or select == "service":    
             service = Service.objects.filter(Q(name__icontains=str) | Q(short_description__icontains=str) | Q(cat__name__icontains=str)).values('id', 'name', 'short_description', 'cat')
+        if select == "all" or select == "works":    
+            works = Works.objects.filter(Q(title__icontains=str) |Q(object__icontains=str) | Q(short_description__icontains=str) | Q(cat__name__icontains=str)).values('id', 'title', 'object', 'short_description', 'cat')
         
-        return JsonResponse({'news': list(news), 'product': list(product), 'service': list(service)})
+        return JsonResponse({'news': list(news), 'product': list(product), 'service': list(service), 'works': list(works)})
     else:
         return HttpResponseNotFound('404')
  

@@ -1,0 +1,43 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block b_head %}
+{{super}}
+<title>contacts</title>
+<link rel="stylesheet" href="{% static 'contacts/css/contacts.css' %}">
+{% endblock %}
+{% block b_body%}
+
+<div class="cards_div">
+
+    {% for n in contacts %}
+    {% if n.is_published %}
+    <div class="card_div">
+      <div class="card_div_body">
+        <div class="card_div_title">
+          <h6 class="card_h">{{n.job_title}}</h6>
+        </div>
+        <div class="card_div_title">
+            <h6 class="card_h">{{n.initials}}</h6>
+          </div>
+          <div class="card_div_title">
+            <h6 class="card_h">{{n.phone}}</h6>
+          </div>
+          <div class="card_div_title">
+            <h6 class="card_h">{{n.email}}</h6>
+          </div>
+        <div class="card_div_content">
+          <p class="card_p">{{n.description}}</p>
+        </div>
+        <div class="card_div_link">
+          <a href="/contacts/contacts/{{n.id}}" class="card_a">
+            Подробнее
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %} 
+
+    <script src="{% static 'contacts/js/contacts.js' %}"></script> 
+{% endblock %}
+
