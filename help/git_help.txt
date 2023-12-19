@@ -1,2 +1,4 @@
 git add *
 git commit -m "1 мой первый "
+
+git commit -m "2 мой второй "

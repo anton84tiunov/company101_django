@@ -118,7 +118,7 @@ header_but_search.addEventListener('click', function(event) {
                             });
                         }
                     }
-                    if(header_select_search.value === "all" || header_select_search.value === "news" ){
+                    if(header_select_search.value === "all" || header_select_search.value === "product" ){
 
                         if(search_result['product']){
                             search_result['product'].forEach(n => {

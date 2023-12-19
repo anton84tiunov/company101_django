@@ -44,6 +44,7 @@ body{
 }
 #header_nav_ui li{
     list-style: none;
+    margin-left: 10px;
     /* border-width: 2px;
     border-style: ridge; */
     /* border-color: rgb(216, 225, 233); */
